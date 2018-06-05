@@ -40,7 +40,7 @@ export default class NodeView extends React.PureComponent<IProps, IState> {
     if (!isEqual(this.props.node, nextProps.node)) {
       this.setState({
         node: {
-          opened: this.props.node.opened ? this.props.node.opened : false,
+          opened: nextProps.node.opened ? nextProps.node.opened : false,
           ...nextProps.node,
         },
       })
